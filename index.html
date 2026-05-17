@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureAI - Bank Fraud Detection System</title>
+    <!-- Font Awesome CDN for Modern Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Responsive Glassmorphic Navbar -->
+    <nav class="navbar-custom">
+        <a href="/" class="navbar-brand-custom">
+            <i class="fas fa-shield-halved"></i> SecureAI
+        </a>
+        <ul class="navbar-links">
+            <li><a href="/" class="active">Home</a></li>
+            <li><a href="/predict">Predictor</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Page Content Container -->
+    <main class="container">
+        
+        <!-- Hero Fintech Landing Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>AI-Powered Bank Fraud Detection</h1>
+                <p>Protecting consumer assets with state-of-the-art machine learning anomaly classification. SecureAI scans transaction features in real-time, detecting suspicious events with high precision using an optimized RandomForest pipeline.</p>
+                <div class="hero-buttons">
+                    <a href="/predict" class="btn-primary-glow">
+                        <i class="fas fa-bolt"></i> Try Predictor
+                    </a>
+                    <a href="/dashboard" class="btn-secondary-glow">
+                        <i class="fas fa-chart-line"></i> View Dashboard
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Glowing Rotating secure globe -->
+                <div class="visual-globe"></div>
+                <!-- Translucent floating virtual credit card -->
+                <div class="glass-panel visual-card card-glow-cyan">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                        <i class="fas fa-microchip" style="font-size: 1.8rem; color:#f3f4f6;"></i>
+                        <i class="fa-brands fa-cc-visa" style="font-size: 2.2rem; color:rgba(255,255,255,0.75);"></i>
+                    </div>
+                    <div style="font-family:'Outfit'; font-size:1.1rem; letter-spacing:0.1em; margin-bottom:1rem; text-shadow:0 2px 4px rgba(0,0,0,0.5);">
+                        4000 1234 5678 9010
+                    </div>
+                    <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-secondary); text-transform:uppercase;">
+                        <div>
+                            <span>Card Holder</span>
+                            <div style="color:white; font-weight:600; margin-top:2px;">SECURE USER</div>
+                        </div>
+                        <div style="text-align:right;">
+                            <span>Expires</span>
+                            <div style="color:white; font-weight:600; margin-top:2px;">08/29</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Showcase Section -->
+        <section>
+            <h2 class="section-title">Key Core Features</h2>
+            <div class="features-grid">
+                
+                <!-- Feature 1 -->
+                <div class="glass-panel feature-card card-glow-indigo">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>PCA Feature Scanning</h3>
+                    <p>Classifies high-dimensional transaction spaces (V1 to V28) containing mathematically compressed purchasing and merchant behavioral factors.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="glass-panel feature-card card-glow-cyan">
+                    <div class="feature-icon">
+                        <i class="fas fa-gauge-high"></i>
+                    </div>
+                    <h3>Real-Time Prediction</h3>
+                    <p>AJAX non-blocking technology processes inputs and outputs risk classification scores within milliseconds with no page reloads.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="glass-panel feature-card card-glow-indigo">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Dynamic Dashboards</h3>
+                    <p>Evaluates classifier metrics, displaying recall curves, confusion matrices, and feature importances with interactive animated Chart.js graphs.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Deep Dive Model About Section -->
+        <section class="about-section">
+            <div class="about-grid">
+                <div class="about-image">
+                    <i class="fas fa-brain" style="font-size: 8rem; color: rgba(255,255,255,0.15); z-index: 1;"></i>
+                    <div class="glass-panel about-stat-box card-glow-cyan" style="z-index: 2;">
+                        <h4 style="margin-bottom: 0.5rem; color: var(--accent-cyan);">Dataset Highlight</h4>
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;">
+                            Trained on the highly challenging European cardholders dataset containing 284,807 transactions. An extreme class imbalance exists with only 492 fraud occurrences (0.172%).
+                        </p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 1.5rem; background: linear-gradient(135deg, #ffffff 60%, var(--accent-indigo) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        Under the Hood
+                    </h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">
+                        SecureAI implements a highly tuned **RandomForestClassifier** built inside the Scikit-learn environment. To resolve the extreme scarcity of fraud vectors, we leverage automated class reweighting adjustments.
+                    </p>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                        By adjusting penalties proportionally to class frequencies, our algorithm maintains high **recall (sensitivity)**. This means the system flags anomalies even when they are disguised as standard consumer habits.
+                    </p>
+                    <a href="/predict" class="btn-primary-glow">
+                        Get Started <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-logo">
+            <i class="fas fa-shield-halved"></i> SecureAI
+        </div>
+        <p>&copy; 2026 SecureAI. Premium Bank Fraud Intelligence. All rights reserved.</p>
+        <p style="font-size: 0.75rem; color: rgba(255,255,255,0.15); margin-top: 1rem;">Created for Professional Portfolio & Academic Research</p>
+    </footer>
+
+</body>
+</html>
